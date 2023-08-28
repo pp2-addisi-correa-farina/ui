@@ -1,7 +1,12 @@
 package org.example;
 
+import org.example.view.View;
+import org.pp2.ControladorTemperatura;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        ControladorTemperatura controladorTemperatura = new ControladorTemperatura();
+        View view = new View(controladorTemperatura);
+        view.init();
     }
 }

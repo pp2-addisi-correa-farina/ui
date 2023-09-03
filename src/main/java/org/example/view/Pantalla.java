@@ -3,19 +3,18 @@ package org.example.view;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.UIManager;
 
-import org.example.view.panels.Switch;
-
-public class Swing_View {
+public class Pantalla {
 
 	private JFrame frame;
-	private Switch switchTemp;
+	private PanelDeTemperatura switchTemp;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Swing_View window = new Swing_View();
+					Pantalla window = new Pantalla();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -24,7 +23,7 @@ public class Swing_View {
 		});
 	}
 
-	public Swing_View() {
+	public Pantalla() {
 		initialize();
 	}
 
@@ -35,7 +34,7 @@ public class Swing_View {
 		frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		switchTemp = new Switch(frame);
+		switchTemp = new PanelDeTemperatura(frame);
 		frame.getContentPane().add(switchTemp);
 	}
 

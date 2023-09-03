@@ -19,18 +19,18 @@ public class PanelDeTemperatura extends JPanel {
 		JLabel lblClimatotal = new JLabel("ClimaTotal");
 		lblClimatotal.setForeground(Color.WHITE);
 		lblClimatotal.setFont(new Font("Noto Sans CJK HK", Font.BOLD, 40));
-		lblClimatotal.setBounds(214, 43, 218, 48);
+		lblClimatotal.setBounds(211, 24, 218, 48);
 		add(lblClimatotal);
 
 		JButton btnNewButton = new JButton("Establecer temperatura");
 		btnNewButton.setBackground(UIManager.getColor("List.foreground"));
 		btnNewButton.setForeground(UIManager.getColor("List.foreground"));
-		btnNewButton.setBounds(225, 295, 218, 25);
+		btnNewButton.setBounds(211, 295, 218, 25);
 		add(btnNewButton);
 
 		JSlider slider = new JSlider();
 		slider.setBackground(UIManager.getColor("List.foreground"));
-		slider.setBounds(232, 188, 200, 16);
+		slider.setBounds(220, 177, 200, 16);
 		add(slider);
 
 	}

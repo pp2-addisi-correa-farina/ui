@@ -6,6 +6,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JSlider;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.UIManager;
 import java.awt.Color;
 import javax.swing.SwingConstants;
@@ -27,6 +30,13 @@ public class PanelDeTemperatura extends JPanel {
 		btnNewButton.setForeground(UIManager.getColor("List.foreground"));
 		btnNewButton.setBounds(245, 259, 150, 29);
 		add(btnNewButton);
+		btnNewButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	System. out. println("Button Pressed!");
+            	//Llamar al método para ejecutar comando del Core
+            }
+        });
 		
 		JLabel lblSamsungv = new JLabel("SamsungV6");
 		lblSamsungv.setFont(new Font("Dialog", Font.PLAIN, 23));

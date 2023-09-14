@@ -1,21 +1,13 @@
 package org.example.view;
 
-import javax.swing.JPanel;
-import javax.swing.JLabel;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JSlider;
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import org.pp2.Dispositivo;
 
-import javax.swing.UIManager;
-import java.awt.Color;
-import javax.swing.SwingConstants;
+import javax.swing.*;
+import java.awt.*;
 
 public class PanelDeTemperatura extends JPanel {
 
-	public PanelDeTemperatura(JFrame frame) {
+	public PanelDeTemperatura(Dispositivo dispositivo) {
 		setBackground(UIManager.getColor("List.foreground"));
 		setLayout(null);
 
@@ -30,13 +22,10 @@ public class PanelDeTemperatura extends JPanel {
 		btnNewButton.setForeground(UIManager.getColor("List.foreground"));
 		btnNewButton.setBounds(245, 259, 150, 29);
 		add(btnNewButton);
-		btnNewButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            	System. out. println("Button Pressed!");
-            	//Llamar al método para ejecutar comando del Core
-            }
-        });
+		btnNewButton.addActionListener(e -> {
+			System. out. println("Ejecutando encendido");
+			dispositivo.ejecutar("ENCENDER");
+		});
 		
 		JLabel lblSamsungv = new JLabel("SamsungV6");
 		lblSamsungv.setFont(new Font("Dialog", Font.PLAIN, 23));

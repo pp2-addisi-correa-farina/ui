@@ -14,8 +14,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.AngeloBenjamin0:pp2-lca-test:-SNAPSHOT'
-    implementation name: 'pp2-extension-1-1.1'
+    implementation 'com.github.AngeloBenjamin0:pp2-lca-test:364a935dc7'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
 }

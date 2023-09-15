@@ -4,11 +4,12 @@ import org.example.view.View;
 import org.pp2.ClimaTotal;
 import org.pp2.Dispositivo;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
-        List<Dispositivo> dispositivos = ClimaTotal.inicializarDispositivos("src/main/resources/dispositivos.json");
+    public static void main(String[] args) throws FileNotFoundException {
+        List<Dispositivo> dispositivos = ClimaTotal.inicializarDispositivos("src/main/resources/dispositivos.json", "libs/");
         View view = new View(dispositivos);
         view.init();
     }

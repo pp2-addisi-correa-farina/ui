@@ -8,13 +8,11 @@ version '1.0-SNAPSHOT'
 repositories {
     mavenCentral()
     maven { url 'https://jitpack.io' }
-    flatDir {
-        dirs 'libs'
-    }
 }
 
 dependencies {
-    implementation 'com.github.AngeloBenjamin0:pp2-lca-test:364a935dc7'
+    implementation 'com.github.AngeloBenjamin0:pp2-lca-test:3947181b57'
+    implementation fileTree(dir: 'src/test/resources/plugins', include: '*.jar')
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
 }

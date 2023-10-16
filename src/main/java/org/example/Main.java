@@ -9,7 +9,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        List<Dispositivo> dispositivos = ClimaTotal.inicializarDispositivos("src/main/resources/dispositivos.json", "libs/");
+        //src/main/resources/application.properties src/test/resources/plugins "Samsung v2" APAGAR
+        List<Dispositivo> dispositivos = new ClimaTotal("src/test/resources/plugins", "src/main/resources/application.properties")
+                .getDispositivos();
         View view = new View(dispositivos);
         view.init();
     }

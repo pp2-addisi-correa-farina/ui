@@ -4,6 +4,7 @@ import org.example.controller.Controller;
 import org.pp2.Dispositivo;
 
 import javax.swing.*;
+import java.awt.*;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.util.List;
@@ -14,6 +15,7 @@ public class View implements PropertyChangeListener {
     private final List<Dispositivo> dispositivos;
     private JFrame frame;
     private PanelDeTemperatura switchTemp;
+
     public View(List<Dispositivo> dispositivos) {
         this.dispositivos = dispositivos;
 //        this.controladorTemperatura.attach(this);

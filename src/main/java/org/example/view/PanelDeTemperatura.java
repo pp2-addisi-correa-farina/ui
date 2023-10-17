@@ -43,7 +43,6 @@ public class PanelDeTemperatura extends JPanel {
 			System. out. println("Ejecutando encendido");
 			try {
 				dispositivo.ejecutar("ENCENDER");
-				throw new RuntimeException("test");
 			} catch (RuntimeException ex) {
 				JOptionPane.showMessageDialog(this, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
 			}

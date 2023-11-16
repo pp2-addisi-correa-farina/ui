@@ -7,9 +7,6 @@ import java.awt.*;
 
 public class PanelDeTemperatura extends JPanel {
 
-	private final JCheckBox checkBoxHabilitarHistorico;
-	private final JButton btnGenerarReporte;
-
 	public PanelDeTemperatura(Dispositivo dispositivo) {
 		setBackground(UIManager.getColor("List.foreground"));
 		setLayout(null);
@@ -20,27 +17,13 @@ public class PanelDeTemperatura extends JPanel {
 		lblClimatotal.setBounds(211, 24, 218, 48);
 		add(lblClimatotal);
 
-		checkBoxHabilitarHistorico = new JCheckBox("Habilitar historico");
-		checkBoxHabilitarHistorico.setBackground(UIManager.getColor("List.foreground"));
-		checkBoxHabilitarHistorico.setForeground(Color.WHITE);
-		checkBoxHabilitarHistorico.setBounds(150, 100, 150, 30);
-		checkBoxHabilitarHistorico.addActionListener(e -> updateButtonState());
-		add(checkBoxHabilitarHistorico);
-
-		btnGenerarReporte = new JButton("Generar reporte");
-		btnGenerarReporte.setBounds(330, 100, 150, 30);
-		btnGenerarReporte.setBackground(UIManager.getColor("List.foreground"));
-		btnGenerarReporte.setForeground(UIManager.getColor("List.foreground"));
-		btnGenerarReporte.setEnabled(false);
-		add(btnGenerarReporte);
-
 		JButton btnNewButton = new JButton("Encender");
 		btnNewButton.setBackground(UIManager.getColor("List.foreground"));
 		btnNewButton.setForeground(UIManager.getColor("List.foreground"));
 		btnNewButton.setBounds(245, 259, 150, 29);
 		add(btnNewButton);
 		btnNewButton.addActionListener(e -> {
-			System. out. println("Ejecutando encendido");
+//			System. out. println("Ejecutando encendido");
 			try {
 				dispositivo.ejecutar("ENCENDER");
 			} catch (RuntimeException ex) {
@@ -56,7 +39,4 @@ public class PanelDeTemperatura extends JPanel {
 
 	}
 
-	private void updateButtonState() {
-		btnGenerarReporte.setEnabled(checkBoxHabilitarHistorico.isSelected());
-	}
 }
